@@ -1,0 +1,55 @@
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.mental-health-tracker {
+  min-height: 100vh !important;
+  background: linear-gradient(-45deg, #5C2D91, #121E3A, #3D2C8D, #b0905d, #4B0082, #2A1A5E) !important;
+
+
+
+
+
+  /* background-size: 400% 400% !important; */
+  animation: gradient 5s ease infinite !important;
+}
+
+
+
+
+
+.hover-effect {
+  transition: all 0.3s ease !important;
+}
+
+.hover-effect:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary {
+  background-color: #4a90e2;
+  border-color: #4a90e2;
+}
+
+.btn-primary:hover {
+  background-color: #357abd;
+  border-color: #357abd;
+}
+
+.backgroundcolor{
+  width: 70%;
+}
+/* .mental-health-tracker.bg-gradient {
+  background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #ffecd2, #fcb69f) !important;
+} */
+

@@ -1,0 +1,18 @@
+
+.videocontainer {
+  /* position: relative; */
+  display: flex;             /* Equivalent to 'flex' */
+  flex-direction: column;   /* Equivalent to 'flex-col' */
+  height: 100%;              /* Equivalent to 'h-full' */
+  width: 100%;             
+}
+.video-background{
+  transform: rotate(180deg); /* Rotate the element 180 degrees */
+  position: absolute;       
+  top: -280px;               /* Move the element 340px above its normal position */
+  height: 100%;              /* Set the height to 100% of the parent container */
+  width: 100%;               /* Set the width to 100% of the parent container */
+  left: 0;                   /* Align the element to the left */
+  z-index: -1;                /* Set the z-index to 1 for stacking order */
+  object-fit: cover;  
+}

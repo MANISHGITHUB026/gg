@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif+Khitan+Small+Script&family=Oswald:wght@200..700&family=Roboto+Slab:wght@100..900&family=Rubik+80s+Fade&family=Wallpoet&display=swap');
+/* Make the navbar background transparent */
+.navbar {
+  /* background-color: transparent; */
+  height: 40px; /* Adjust this value as needed for a smaller height */
+  padding-top: 0;
+  padding-bottom: 0;
+  /* padding-left: 20px;
+  padding-right: 20px; */
+}
+.navbarcontain{
+  position: relative; 
+  background: rgba(3, 0, 20, 0.3); 
+  backdrop-filter: blur(2px); 
+  -webkit-backdrop-filter: blur(10px); 
+  padding-left: 30px;
+  padding-right: 30px; 
+}
+
+/* Set the background color of the entire page */
+body {
+  background-color: rgb(3, 0, 20);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+
+
+/* Adjust the navbar-brand and nav-link to align vertically within the smaller navbar */
+.navbar-brand {
+  font-size: 30px;
+  font-family: "Wallpoet", serif;
+  margin-top: 10PX;
+  line-height: 50px; 
+  background: linear-gradient(
+    to right,
+    #765384,
+    #785997,
+    #4F307E,
+    #ffff,
+    #160B2E,
+    #321D63
+    /* #ff00ff,
+    #00ff00,
+    #0000ff,
+    #ff0000,
+    #ff00ff */
+  );
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shine 5s linear infinite;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+
+  /* Match this to the navbar height for vertical alignment */
+}
+.nav-link {
+  color: white;
+  font-size: 25px;
+  font-weight: 400;
+  padding-top: 10px;
+  line-height: 50px; /* Match this to the navbar height for vertical alignment */
+
+}
+.nav-link:hover {
+  color: white;
+  font-size: 25px;
+  font-weight: 400;
+  padding-top: 10px;
+  line-height: 50px; /* Match this to the navbar height for vertical alignment */
+
+}
+.navbar-brand:hover{
+  font-size: 30px;
+  font-family: "Wallpoet", serif;
+  margin-top: 10PX;
+  line-height: 50px; 
+  background: linear-gradient(
+    to right,
+    #765384,
+    #785997,
+    #4F307E,
+    #ffff,
+    #160B2E,
+    #321D63
+    /* #ff00ff,
+    #00ff00,
+    #0000ff,
+    #ff0000,
+    #ff00ff */
+  );
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shine 5s linear infinite;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+
+  /* Match this to the navbar height for vertical alignment */
+}
+
+
