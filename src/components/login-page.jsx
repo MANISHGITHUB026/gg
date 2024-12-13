@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   getAuth,
@@ -7,6 +8,7 @@ import {
   GoogleAuthProvider,
 } from "firebase/auth";
 import mygif from "./gif/logo.gif"
+import "./css/login.css"
 import { firebaseConfig } from "../firebaseConfig";
 
 // Assume Firebase is already initialized in your app
@@ -78,8 +80,8 @@ export default function LoginPage() {
                 Sign in with Google
               </button>
 
-              <div className="text-center mb-4">
-                <span className="text-light-emphasis">or</span>
+              <div className="text-center mb-4 ">
+                <span className="textlightt  ">or</span>
               </div>
 
               <form onSubmit={handleEmailPasswordLogin}>
@@ -93,7 +95,7 @@ export default function LoginPage() {
                     </span>
                     <input
                       type="email"
-                      className="form-control bg-transparent text-light border-light"
+                      className="form-control bg-transparent textlightt border-light"
                       id="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
@@ -113,7 +115,8 @@ export default function LoginPage() {
                     </span>
                     <input
                       type="password"
-                      className="form-control bg-transparent text-light border-light"
+                      className="form-control bg-transparent border-light"
+                      style={{ color: 'white' }}
                       id="password"
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
@@ -136,7 +139,7 @@ export default function LoginPage() {
                       Remember for 30 days
                     </label>
                   </div>
-                  <a href="#" className="text-decoration-none text-info">Forgot password?</a>
+                  {/* <a href="#" className="text-decoration-none text-info">Forgot password?</a> */}
                 </div>
 
                 <button type="submit" className="btn btn-primary w-100 mb-3">
@@ -145,7 +148,11 @@ export default function LoginPage() {
 
                 <p className="text-center mb-0">
                   Don't have an account?{' '}
-                  <a href="#" className="text-decoration-none text-info">Sign up</a>
+                  <hr />
+                  Click above Sign-up button 
+                  {/* <a href="/signup-page" className="text-decoration-none text-info">Sign up</a> */}
+                  
+                  
                 </p>
               </form>
             </div>
@@ -154,17 +161,15 @@ export default function LoginPage() {
           <div className="col-md-6 d-none d-md-block p-0">
             <div className="position-relative h-100">
               <img
-                src={mygif}  ///placeholder.svg?height=600&width=600
+                src={mygif}
                 alt="Health and wellness animation"
                 className="img-fluid rounded-end h-100 object-fit-cover"
                 style={{ width: '100%' }}
               />
               <div className="position-absolute top-50 start-50 translate-middle text-light text-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" className="bi bi-person mb-3" viewBox="0 0 16 16">
-                  <path d=""/>    
-                </svg>
-                {/* <h3 className="fw-bold mb-3">YOUR PERSONAL</h3>
-                <h3 className="fw-bold">HEALTH COMPANION</h3> */}
+                {/* <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" className="bi bi-person mb-3" viewBox="0 0 16 16">
+                  <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                </svg> */}
               </div>
             </div>
           </div>
@@ -208,3 +213,4 @@ export default function LoginPage() {
     </div>
   );
 }
+

@@ -12,13 +12,16 @@ import FoodRecommendations from "./components/FoodRecommendations";
 import RecipeGenerator from "./components/RecipeGenerator";
 import MentalHealthTracker from "./components/MentalHealthTracker";
 import Dashboard from "./components/Dashboard";
-import Login from "./components/Login";
+import Login from "./components/login-page";
+import Signup from "./components/signup-page"; 
 import { initializeApp } from "firebase/app";
 import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 import { firebaseConfig } from "./firebaseConfig";
 import "./components/css/app.css";
 import Hero from "./components/hero";
 import "bootstrap/dist/css/bootstrap.min.css";
+
+// import StarsCanvas from './components/starBackground'; 
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
@@ -48,9 +51,16 @@ function NavbarComponent({ user, handleLogout }) {
                 <Nav.Link href="/recipe-generator"></Nav.Link>
                 <Nav.Link href="/mental-health"></Nav.Link>
                 <Nav.Link onClick={handleLogout}>Logout</Nav.Link>
+                
               </>
             ) : (
-              <Nav.Link href="/login">Login</Nav.Link>
+            // <Nav.Link href="/login">Login</Nav.Link>
+            <>
+                <Nav.Link href="/login">Login</Nav.Link>
+                <Nav.Link href="/Signup">Sign Up</Nav.Link> 
+              </>
+              
+            
             )}
           </Nav>
         </Navbar.Collapse>
@@ -83,6 +93,7 @@ function App() {
 
   return (
     <Router>
+      
       <main className="p-0 m-0 w-100 h-100">
         <div
           className="d-flex flex-column"
@@ -95,6 +106,11 @@ function App() {
                 <Route
                   path="/login"
                   element={user ? <Navigate to="/" /> : <Login />}
+                />
+                {/* Sign-Up Route */}
+                <Route
+                  path="/Signup"
+                  element={<Signup />}  
                 />
                 <Route
                   path="/"
@@ -144,8 +160,12 @@ function App() {
                 />
               </Routes>
             </Container>
+            
           </div>
+          {/* {location.pathname !== "/login" && location.pathname !== "/mental-health" && location.pathname !== "/Dashboard"&& <StarsCanvas />} */}
           <Hero />
+          
+          
         </div>
       </main>
     </Router>

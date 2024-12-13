@@ -29,6 +29,7 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getAnalytics, isSupported } from "firebase/analytics";
+import { getAuth } from "firebase/auth"; // Import getAuth for Firebase Authentication
 
 // Your web app's Firebase configuration
 export const firebaseConfig = {
@@ -59,4 +60,7 @@ if (typeof window !== "undefined") {
 // Initialize Firestore
 const db = getFirestore(app);
 
-export { db };
+// Initialize Firebase Authentication
+const auth = getAuth(app);  // Initialize Authenticatio
+
+export { db ,auth  };

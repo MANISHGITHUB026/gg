@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Geist+Mono:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif+Khitan+Small+Script&family=Oswald:wght@200..700&family=Roboto+Slab:wght@100..900&family=Rubik+80s+Fade&family=Wallpoet&display=swap');
+
+:root {
+  /* --background: #0a060f;              #150d22  */
+  --card-background: #150d22;      
+  --icon-background: #2a1e35;
+  --primary: #9333ea;
+  --primary-hover: #7928ca;
+  --text-gray: rgb(156 163 175);
+}
+.tagline{
+  margin-top: 250px;
+  margin-bottom: 20px;
+}
+.taglinefont{
+  font-family: "Geist Mono", monospace;
+  font-optical-sizing: auto;
+  /* font-weight: <weight>; */
+  font-style: normal;
+  font-size: 50px;
+}
+.tagline .welcome,
+.tagline .health-dashboard {
+  opacity: 0;
+  transition: opacity 0.7s ease-in-out;
+}
+
+.tagline .welcome {
+  animation: fadeIn 2s forwards;
+}
+
+.tagline .health-dashboard {
+  animation: fadeIn 1s 1.5s forwards; /* Delays the fade-in by 1.5 seconds */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.Cardbg{
+  border: 2px solid rgba(128, 0, 128, 0.2);
+
+}
+.custom-box {
+   
+  background-color: rgba(0, 0, 0, 0.4); /* Black background with 40% opacity */
+  backdrop-filter: blur(4px); /* Apply a blur effect to the backdrop */
+  margin-bottom: 1rem; /* mb-3 equivalent */
+  display: flex; /* flex */
+  height: 3rem; /* h-12 equivalent */
+  width: 3rem; /* w-12 equivalent */
+  align-items: center; /* items-center */
+  justify-content: center; /* justify-center */
+  border-radius: 0.5rem; /* rounded-lg equivalent */
+}
+
+
+
+.bg-\[\#0a060f\] { background-color: var(--background); }
+.bg-\[\#1a1225\] { background-color: var(--card-background); }
+.bg-\[\#2a1e35\] { background-color: var(--icon-background); }
+.bg-\[\#9333ea\] { background-color: var(--primary); }
+.text-\[\#9333ea\] { color: var(--primary); }
+.hover\:bg-\[\#7928ca\]:hover { background-color: var(--primary-hover); }
+.text-gray-400 { color: var(--text-gray); }
+
+/* Add any other utility classes you need */
+.min-h-screen { min-height: 100vh; }
+.rounded-lg { border-radius: 0.5rem; }
+.w-12 { width: 3rem; }
+.h-12 { height: 3rem; }
+.w-6 { width: 1.5rem; }
+.h-6 { height: 1.5rem; }
+.mb-4 { margin-bottom: 1rem; }
+.mb-2 { margin-bottom: 0.5rem; }
+.p-6 { padding: 1.5rem; }
+.py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+/* .transition-colors { transition-property: background-color, border-color, color, fill, stroke; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; } */

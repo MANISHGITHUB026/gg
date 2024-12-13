@@ -23,7 +23,7 @@ const RecipeCard = ({ onSubmit }) => {
   };
 
   return (
-    <div className="card h-100  blur1">
+    <div className="card h-100  blur1" style={{ maxHeight: '700px', overflowY: 'auto' }}>
       <div className="card-bodyy d-flex flex-column p-5">
         <h2 className="card-title text-success mb-4">Recipe Generator</h2>
         <div className="mb-3">
@@ -140,23 +140,23 @@ const Recipes = () => {
 
   return (
     <div className=" d-flex align-items-center justify-content-center p-4 backgroundimage" style={{
-      overflow: 'hidden', // Prevents scroll
+       // Prevents scroll
       height: '100vh', // Full viewport height
       backgroundImage: `url(${recipeGenbackcover})`,
         backgroundRepeat: 'repeat',
         backgroundSize: 'cover', // Optional: covers the container
         backgroundPosition: 'center', // Optional: centers the image
     }}>
-      <div className="container">
+      <div className="container ">
         <div className="row justify-content-center">
           <div className="col-lg-5 mb-4 mb-lg-0">
             <RecipeCard onSubmit={onSubmit} />
           </div>
           <div className="col-lg-5 ">
-            <div className="card h-100 bg-darkk">
-              <div className="card-body d-flex flex-column m-4">
-                <h2 className="card-title text-success mb-4">Your Recipe</h2>
-                <div className="recipe-content flex-grow-1">
+            <div className="card h-100 bg-darkk "style={{ maxHeight: '700px', overflowY: 'auto' }}>
+              <div className="card-body d-flex flex-column m-4 text-white">
+                <h2 className="card-title text-success mb-4 ">Your Recipe</h2>
+                <div className="recipe-content flex-grow-1 text-white">
                   <div dangerouslySetInnerHTML={{ __html: sanitizedText }} />
                 </div>
               </div>
